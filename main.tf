@@ -24,6 +24,11 @@ variable "app_service_name_prefix" {
   description = "The beginning part of your App Service host name"
 }
 
+provider "azurerm" {
+  version = "=2.4.0"
+  features {}
+}
+
 resource "random_integer" "app_service_name_suffix" {
   min = 1000
   max = 9999
